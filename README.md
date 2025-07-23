@@ -5,20 +5,18 @@ This repository contains code and outputs for **differential expression (DE)** a
 ## Repository Contents
 
 ### `differential_expression_analysis.ipynb`
-Final, cleaned notebook for differential expression analysis using both **limma-voom** and **DESeq2** in R.  
+Jupyter notebook for the core differential expression analysis.  
 This analysis follows the methodology described in the manuscript and includes:
-- Pre-filtering of lowly expressed genes
-- Normalization (TMM, voom transformation)
+- Counts normalization
 - Differential expression testing (pairwise comparisons, dosage modeling)
-- Multiple testing correction (Benjamini-Hochberg)
 - Gene set enrichment analysis (GSEA) using **fgsea** with MSigDB and custom gene sets
+- TRADE analysis
 
 ### `run_PEER.sh`
-Shell script for running **PEER** (Probabilistic Estimation of Expression Residuals) on merged neuron and astrocyte datasets.
-- Requires **R v3.5** (as required by PEER)
+Shell script for running **PEER** on merged neuron and astrocyte datasets.
+- Requires **R v3.5** 
 - Inputs: CPM-normalized, log-transformed, rank-based INT gene expression matrices
-- Uses the top 7,000 most variable genes
-- PEER run with **15 latent factors**
+- run with **15 latent factors**
 
 ### `analyze_peer_outputs.ipynb`
 Notebook for downstream analysis of **PEER latent factors**, including:
