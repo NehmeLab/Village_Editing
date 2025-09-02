@@ -8,9 +8,8 @@ This repository contains code and outputs for **differential expression (DE)** a
 Jupyter notebook for the core differential expression analysis.  
 This analysis follows the methodology described in the manuscript and includes:
 - Counts normalization
-- Differential expression testing (pairwise comparisons, dosage modeling)
+- Differential expression analysis with DESeq2 (pairwise comparisons, dosage modeling)
 - Gene set enrichment analysis (GSEA) using **fgsea** with MSigDB and custom gene sets
-- TRADE analysis
 
 ### `run_PEER.sh`
 Shell script for running **PEER** on merged neuron and astrocyte datasets.
